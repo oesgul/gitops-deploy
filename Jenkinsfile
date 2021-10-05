@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        DOMAIN='apps.ocp-prod.du.ae'
+        DOMAIN='apps.cluster-82a1.dynamic.opentlc.com'
         PRJ="hello-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
         APP='nodeapp'
     }
