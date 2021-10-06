@@ -15,7 +15,7 @@ pipeline {
                 script {
                     // Uncomment to get lots of debugging output
                     //openshift.logLevel(1)
-                    sh 'echo $BRANCH_NAME'
+                  
                     openshift.withCluster() {
                         echo("Create project ${env.PRJ}") 
                         openshift.newProject("${env.PRJ}")
