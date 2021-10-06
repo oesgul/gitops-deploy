@@ -3,6 +3,7 @@ pipeline {
         DOMAIN='apps.cluster-82a1.dynamic.opentlc.com'
         PRJ="hello-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
         APP='nodeapp'
+        BRANCH_NAME='master'
     }
     agent {
       node {
