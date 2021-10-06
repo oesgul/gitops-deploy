@@ -23,6 +23,8 @@ pipeline {
                             echo('Grant to developer read access to the project')
                             openshift.raw('policy', 'add-role-to-user', 'view', 'developer')
                             echo("Create app ${env.APP}") 
+                            echo ("url and branch name are: ")
+                            echo ("${env.GIT_URL}#${env.BRANCH_NAME}")
                             openshift.newApp("${env.GIT_URL}#${env.BRANCH_NAME}", "--strategy source", "--name ${env.APP}")
                         }
                     }
